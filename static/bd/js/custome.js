@@ -18,6 +18,14 @@
             e.preventDefault();
         });
 
+        $('.header-bottom-btn a').on('click', function(e){
+          var anchor = $(this);
+          $('html, body').stop().animate({
+              scrollTop: $(anchor.attr('href')).offset().top - 50
+          }, 1500);
+          e.preventDefault();
+        });
+
         $(document).on('click','.navbar-collapse.show',function(e) {
         if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
             $(this).collapse('hide');
