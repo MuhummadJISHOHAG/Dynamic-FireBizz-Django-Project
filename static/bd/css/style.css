@@ -982,6 +982,7 @@ section.brand-area {
     width: 231px;
     line-height: 26px;
     margin: 0;
+    text-transform: capitalize;
 }
 .latest-blog .latest-blog-content .meta-box{
     padding: 37px 0px 93px 0px;

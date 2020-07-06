@@ -17,6 +17,7 @@ from .models import (
 
 # Home Area
 def index(request):
+    #Home Section
     sliders=HomeSlider.objects.all()
     #About Section
     aboutUs=About.objects.get()
@@ -33,6 +34,8 @@ def index(request):
 
     #FQ Section
     fQuestion=FQuestion.objects.all()
+    #Blog Section
+    blogs=Blog.objects.all()
 
     context={
         'sliders':sliders,
@@ -43,6 +46,7 @@ def index(request):
         'caseWork':caseWork,
         'companyBrand':companyBrand,
         'fQuestion':fQuestion,
+        'blogs':blogs,
 
     }
     return render(request,'index.html',context)

@@ -84,7 +84,7 @@
                             {% for singleService in serviceAll  %}
                                 <div class="col-lg-4 col-xl-4 wow slideInDown" data-wow-duration="1.5s" data-wow-delay=".2s">
                                     <div class="service-slider-section">
-                                        <img src="{{singleService.about_image.url}}" alt="">
+                                        <img style="height:270px" src="{{singleService.about_image.url}}" alt="">
                                         <div class="service-slider-text">
                                             <h1>{{singleService.title}}</h1>
                                             <p>{{singleService.description}}</p>
@@ -135,7 +135,7 @@
                                 <img src="{{singleCase.image.url}}" alt="">
                                 <div class="cases-section-text">
                                     <h1>{{singleCase.title}}</h1>
-                                    <a href="{{singleCase.read_more}}">read more</a>
+                                    <a target="_blank" href="{{singleCase.read_more}}">read more</a>
                                 </div>
                             </div>
                         </div>
@@ -230,7 +230,7 @@
         <!-- END BAND SECTION -->
 
         <!-- START FQ QUESTION SECTION -->
-        <section class="fq-question-area">
+        <section id="fq" class="fq-question-area">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 col-lg-5 col-xl-5">
@@ -257,7 +257,7 @@
                                                 </h2>
                                             </div>
                                     
-                                            <div id="{{singlefQuestion.id}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                            <div id="{{singlefQuestion.id}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                                 <div class="card-body">
                                                      {{singlefQuestion.answer}}
                                                 </div>
@@ -282,54 +282,33 @@
                     <p class="wow fadeInRight" data-wow-duration="3s" data-wow-delay=".2s">Sed ut perspiciatis unde omiste naerror voluptate satium doloreque laudan totam rem riam eaque ipsa quae ab illo invetore vtatise.</p>
                 </div>
                 <div class="row ">
-                    <div class="col-md-6 col-lg-6 col-xl-6 wow fadeInRight" data-wow-duration="2.5s" data-wow-delay=".2s">
-                        <div class="latest-blog blog-bg">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-6 col-xl-6">
-                                    <div class="blog-img">
-                                        <img src="bd/img/blog/1.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-6 col-xl-6">
-                                    <div class="latest-blog-content">
-                                        <h1>Webfonts Performance 
-                                        Smashing Videos</h1>
-                                        <div class="meta-box">
-                                            <span>By Admin<span>
-                                            <a href="#"><span>Comments (05)</span></a>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="#">Read more</a>
+
+                    {% for singleBlog in blogs %}
+                        <div class="col-md-6 col-lg-6 col-xl-6 wow fadeInRight" data-wow-duration="2.5s" data-wow-delay=".2s">
+                            <div class="latest-blog blog-bg">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                        <div class="blog-img">
+                                            <img style='height:312px' src="{{singleBlog.image.url}}" alt="">
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-6 col-xl-6 wow fadeInLeft" data-wow-duration="2.5s" data-wow-delay=".2s">
-                        <div class="latest-blog blog-bg">
-                            <div class="row">
-                                <div class="col-md-6 col-lg-6 col-xl-6">
-                                    <div class="blog-img">
-                                        <img src="bd/img/blog/2.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-lg-6 col-xl-6">
-                                    <div class="latest-blog-content">
-                                        <h1>Webfonts Performance 
-                                        Smashing Videos</h1>
-                                        <div class="meta-box">
-                                            <span>By Admin<span>
-                                            <a href="#"><span>Comments (05)</span></a>
-                                        </div>
-                                        <div class="read-more">
-                                            <a href="#">Read more</a>
+                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                        <div class="latest-blog-content">
+                                            <h1>{{singleBlog.title}}</h1>
+                                            <div class="meta-box">
+                                                <span>{{singleBlog.admin_name}}<span>
+                                                <a href="#"><span>{{singleBlog.comments}}</span></a>
+                                            </div>
+                                            <div class="read-more">
+                                                <a target="_blank" href="{{singleBlog.read_more}}">Read more</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    {% endfor %}
+
                 </div>
             </div>
         </section>
