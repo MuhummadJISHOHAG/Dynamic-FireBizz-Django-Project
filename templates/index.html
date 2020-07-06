@@ -132,7 +132,7 @@
                     {% for singleCase in caseWork %}
                         <div class="col-lg-3 col-xl-3 wow slideInDown" data-wow-duration="2.5s" data-wow-delay=".2s">
                             <div class="cases-slider-section">
-                                <img src="{{singleCase.image.url}}" alt="">
+                                <img style="height:406px" src="{{singleCase.image.url}}" alt="">
                                 <div class="cases-section-text">
                                     <h1>{{singleCase.title}}</h1>
                                     <a target="_blank" href="{{singleCase.read_more}}">read more</a>
@@ -151,42 +151,22 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-lg-6 col-xl-6 comment-slider wow fadeInLeft" data-wow-duration="1.5s">
-                        <div class="comment-section">
-                            <div class="comment-text">
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus ditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
-                            </div>
-                            <div class="comment-information d-flex">
-                                <img src="bd/img/comment/1.png" alt="">
-                                <div class="comment-information-d">
-                                    <h1>Marcelino S. Shelton</h1>
-                                    <span>CEO & Founder</span>
+                        
+                        {% for singleContactSlider in contactSlider %}
+                            <div class="comment-section">
+                                <div class="comment-text">
+                                    <p>{{singleContactSlider.description}}</p>
+                                </div>
+                                <div class="comment-information d-flex">
+                                    <img style="width:50px;height:50px;border-radius:50%" src="{{singleContactSlider.image.url}}" alt="Comment Person">
+                                    <div class="comment-information-d">
+                                        <h1>{{singleContactSlider.title}}</h1>
+                                        <span>{{singleContactSlider.profession}}</span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="comment-section">
-                            <div class="comment-text">
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus ditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
-                            </div>
-                            <div class="comment-information d-flex">
-                                <img src="bd/img/comment/1.png" alt="">
-                                <div class="comment-information-d">
-                                    <h1>Marcelino S. Shelton</h1>
-                                    <span>CEO & Founder</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="comment-section">
-                            <div class="comment-text">
-                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus ditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas </p>
-                            </div>
-                            <div class="comment-information d-flex">
-                                <img src="bd/img/comment/1.png" alt="">
-                                <div class="comment-information-d">
-                                    <h1>Marcelino S. Shelton</h1>
-                                    <span>CEO & Founder</span>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
+
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-6">
                         <div class="form-information">

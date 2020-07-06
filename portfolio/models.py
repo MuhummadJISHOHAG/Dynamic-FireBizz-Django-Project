@@ -58,6 +58,10 @@ class CaseWork(models.Model):
 
 
 class Contact(models.Model): 
+    title=models.CharField(max_length=400)
+    description=models.TextField()
+    profession=models.CharField(max_length=400)
+    image=models.FileField(upload_to='comment')
     name=models.CharField(max_length=400)
     email=models.EmailField( max_length=254)
     subject=models.CharField(max_length=400)
@@ -65,14 +69,6 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.name
-
-class ContactComment(models.Model): 
-    title=models.CharField(max_length=400)
-    description=models.TextField()
-    profession=models.CharField(max_length=400)
-
-    def __str__(self):
-        return str(self.title)
 
 class CompanyBrand(models.Model):
     company_logo=models.FileField(upload_to='brand')
@@ -97,19 +93,6 @@ class Blog(models.Model):
         return self.title
 
 
-class Footer(models.Model):
-    title=models.CharField(max_length=50)
-    description=models.TextField()
-    submit_email=models.EmailField(max_length=254)
-    address=models.CharField(max_length=200)
-    number=models.CharField(max_length=100)
-    email=models.EmailField(max_length=254)
-    privacy=models.TextField()
-    term=models.TextField()
-    copy_right=models.CharField(max_length=400)
-
-    def __str__(self):
-        return self.title
     
 
     

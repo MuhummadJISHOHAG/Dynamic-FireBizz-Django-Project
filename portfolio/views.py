@@ -9,8 +9,7 @@ from .models import (
     Contact,
     CompanyBrand,
     FQuestion,
-    Blog,
-    Footer
+    Blog
 )
 
 # Create your views here.
@@ -28,10 +27,11 @@ def index(request):
     live_work=Live_work.objects.get()
     #Case Work Section
     caseWork=CaseWork.objects.all()
+    #commnet slider section
+    contactSlider=Contact.objects.all()
 
     #Brand Section
     companyBrand=CompanyBrand.objects.all()
-
     #FQ Section
     fQuestion=FQuestion.objects.all()
     #Blog Section
@@ -44,9 +44,11 @@ def index(request):
         'serviceAll':serviceAll,
         'live_work':live_work,
         'caseWork':caseWork,
+        'contactSlider':contactSlider,
         'companyBrand':companyBrand,
         'fQuestion':fQuestion,
         'blogs':blogs,
+
 
     }
     return render(request,'index.html',context)
