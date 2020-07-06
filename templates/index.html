@@ -59,7 +59,7 @@
                             </div>
                         </div>
                     {% endfor %}
-                    
+
                     </div>
                 </div>
             </div>
@@ -73,65 +73,24 @@
                     <div class="col-lg-4 col-xl-4">
                         <div class="service-title">
                             <h1 class="wow slideInDown" data-wow-duration="1.5s">service<span></span></h1>
-                            <p class="wow slideInUp" data-wow-duration="2s">Sed ut perspiciatis unde omiste naerror voluptate satium doloreque laudan totam rem riam eaque ipsa quae ab illo invetore vtatis incidunt ut labore  magn</p>
+                            <p class="wow slideInUp" data-wow-duration="2s">I design and develop static and dynamic web sites as per your requirements as we believe, “web is world’s next home”.</p>
                             </div>
                     </div>
                     <div class="col-lg-8 col-xl-8">
                         <div class="row service-slider">
-                            <div class="col-lg-4 col-xl-4 wow slideInDown" data-wow-duration="1.5s" data-wow-delay=".2s">
-                                <div class="service-slider-section">
-                                    <img src="bd/img/service/1.jpg" alt="">
-                                    <div class="service-slider-text">
-                                        <h1>Business Consulting</h1>
-                                        <p>It is a long established fact that a reader will beed by readable content of a page when looking at its these.</p>
+
+                            {% for singleService in serviceAll  %}
+                                <div class="col-lg-4 col-xl-4 wow slideInDown" data-wow-duration="1.5s" data-wow-delay=".2s">
+                                    <div class="service-slider-section">
+                                        <img src="{{singleService.about_image.url}}" alt="">
+                                        <div class="service-slider-text">
+                                            <h1>{{singleService.title}}</h1>
+                                            <p>{{singleService.description}}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-4 col-xl-4 wow slideInDown" data-wow-duration="2s" data-wow-delay=".4s">
-                                <div class="service-slider-section">
-                                    <img src="bd/img/service/2.jpg" alt="">
-                                    <div class="service-slider-text">
-                                        <h1>Growth & Improve</h1>
-                                        <p>It is a long established fact that a reader will beed by readable content of a page when looking at its these.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-xl-4 wow slideInDown" data-wow-duration="2.5s" data-wow-delay=".6s">
-                                <div class="service-slider-section">
-                                    <img src="bd/img/service/3.jpg" alt="">
-                                    <div class="service-slider-text">
-                                        <h1>Financial Soluation</h1>
-                                        <p>It is a long established fact that a reader will beed by readable content of a page when looking at its these.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-xl-4 wow slideInDown" data-wow-duration="1.5s" data-wow-delay=".2s">
-                                <div class="service-slider-section">
-                                    <img src="bd/img/service/1.jpg" alt="">
-                                    <div class="service-slider-text">
-                                        <h1>Business Consulting</h1>
-                                        <p>It is a long established fact that a reader will beed by readable content of a page when looking at its these.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-xl-4 wow slideInDown" data-wow-duration="2s" data-wow-delay=".4s">
-                                <div class="service-slider-section">
-                                    <img src="bd/img/service/2.jpg" alt="">
-                                    <div class="service-slider-text">
-                                        <h1>Growth & Improve</h1>
-                                        <p>It is a long established fact that a reader will beed by readable content of a page when looking at its these.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-xl-4 wow slideInDown" data-wow-duration="2.5s" data-wow-delay=".6s">
-                                <div class="service-slider-section">
-                                    <img src="bd/img/service/3.jpg" alt="">
-                                    <div class="service-slider-text">
-                                        <h1>Financial Soluation</h1>
-                                        <p>It is a long established fact that a reader will beed by readable content of a page when looking at its these.</p>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
+                            
                         </div>
                     </div>
                 </div>

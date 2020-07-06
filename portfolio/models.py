@@ -3,18 +3,10 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-def image_upload(instance,filename):
-    imagename,extension=filename.split(".")
-    return "home/%s.%s"%(instance.id,extension)
-    return "about/%s.%s"%(instance.id,extension)
-    return "case/%s.%s"%(instance.id,extension)
-    return "service/%s.%s"%(instance.id,extension)
-    return "brand/%s.%s"%(instance.id,extension)
-    return "blog/%s.%s"%(instance.id,extension)
 
 class HomeSlider(models.Model):
     title=models.CharField(max_length=400)
-    image=models.FileField(upload_to=image_upload)
+    image=models.FileField(upload_to='home')
     subtitle=models.CharField(max_length=300)
     description=models.TextField()
 
@@ -31,7 +23,7 @@ class About(models.Model):
 
 class AboutPerformance(models.Model):
     about_title_help=models.CharField(max_length=400)
-    about_image=models.FileField(upload_to=image_upload)
+    about_image=models.FileField(upload_to='about')
     about_description=models.TextField()
     def __str__(self):
         return self.about_title_help
@@ -40,8 +32,9 @@ class AboutPerformance(models.Model):
 class Service(models.Model):
     title=models.CharField(max_length=400)
     subtitle=models.CharField(max_length=400)
-    about_image=models.FileField(upload_to=image_upload)
+    about_image=models.FileField(upload_to='service')
     description=models.TextField()
+
     def __str__(self):
         return self.title
 
@@ -57,7 +50,7 @@ class Live_work(models.Model):
 
 class CaseWork(models.Model):
     title=models.CharField(max_length=400)
-    image=models.FileField(upload_to=image_upload)
+    image=models.FileField(upload_to='case')
     read_more=models.URLField(max_length=500)
 
     def __str__(self):
@@ -78,7 +71,7 @@ class Contact(models.Model):
 
 
 class CompanyBrand(models.Model):
-    company_logo=models.FileField(upload_to=image_upload)
+    company_logo=models.FileField(upload_to='brand')
 
 
 class FQuestion(models.Model):
@@ -90,7 +83,7 @@ class FQuestion(models.Model):
 
 
 class Blog(models.Model):
-    image=models.FileField(upload_to=image_upload)
+    image=models.FileField(upload_to='blog')
     title=models.CharField(max_length=400)
     comments=models.CharField(max_length=400)
     admin_name=models.ForeignKey(User, on_delete=models.CASCADE)

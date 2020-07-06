@@ -459,7 +459,9 @@ img {
 }
 .service-area .service-slider{}
 .service-area .service-slider .service-slider-section{}
-.service-area .service-slider .service-slider-section img{}
+.service-area .service-slider .service-slider-section img {
+    height: 270px !important;
+}
 .service-area .service-slider .service-slider-section .service-slider-text h1{
     font-size: 20px;
     color: #202020;

@@ -18,13 +18,16 @@ from .models import (
 # Home Area
 def index(request):
     sliders=HomeSlider.objects.all()
+    #About Section
     aboutUs=About.objects.get()
     aboutPerformance=AboutPerformance.objects.all()
-
+    #Service Section
+    serviceAll=Service.objects.all()
 
     context={
         'sliders':sliders,
         'aboutUs':aboutUs,
-        'aboutPerformance':aboutPerformance
+        'aboutPerformance':aboutPerformance,
+        'serviceAll':serviceAll,
     }
     return render(request,'index.html',context)
