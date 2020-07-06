@@ -6,54 +6,25 @@
         <!-- START HOME-SLIDER SECTION -->
         <section id="home" class="home-slider-area wow slideInDown" data-wow-duration="2s">
             <div class="home-slider owl-carousel owl-theme">
-                <div class="single-home-slider d-flex align-items-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-10">
-                                <div class="home-slider-text">
-                                    <h1 class="wow bounceInDown" data-wow-duration="3s">Meet with us to<br>
-                                    success dream <span>business</span></h1>
-                                    <p class="wow fadeInRight" data-wow-duration="3s" >There are many variations of passages of Lorem Ipsum available but the majority have sufered alteration in some form by injected humour randomised </p>
-                                    <div class="home-slider-link wow bounceInUp" data-wow-duration="3s" >
-                                        <a href="#">get started</a>
+
+                {% for singleSlider in sliders %}
+                    <div class="single-home-slider d-flex align-items-center" style="background-image: url({{ singleSlider.image.url }})">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xl-10">
+                                    <div class="home-slider-text">
+                                        <h1 class="wow bounceInDown" data-wow-duration="3s">{{singleSlider.title}}
+                                        <span>{{singleSlider.subtitle}}</span></h1>
+                                        <p class="wow fadeInRight" data-wow-duration="3s" >{{singleSlider.description}}</p>
+                                        <div class="home-slider-link wow bounceInUp" data-wow-duration="3s" >
+                                            <a href="#">get started</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="single-home-slider d-flex align-items-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-10">
-                                <div class="home-slider-text">
-                                    <h1 class="wow bounceInDown" data-wow-duration="3s">Meet with us to<br>
-                                    success dream <span>business</span></h1>
-                                    <p class="wow fadeInRight" data-wow-duration="3s" >There are many variations of passages of Lorem Ipsum available but the majority have sufered alteration in some form by injected humour randomised </p>
-                                    <div class="home-slider-link wow bounceInUp" data-wow-duration="3s" >
-                                        <a href="#">get started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-home-slider d-flex align-items-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-10">
-                                <div class="home-slider-text">
-                                    <h1 class="wow bounceInDown" data-wow-duration="3s">Meet with us to<br>
-                                    success dream <span>business</span></h1>
-                                    <p class="wow fadeInRight" data-wow-duration="3s" >There are many variations of passages of Lorem Ipsum available but the majority have sufered alteration in some form by injected humour randomised </p>
-                                    <div class="home-slider-link wow bounceInUp" data-wow-duration="3s" >
-                                        <a href="#">get started</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </section>
         <!-- END HOME-SLIDER SECTION -->
@@ -65,47 +36,30 @@
                     <div class="col-md-5 col-lg-5 col-xl-5">
                         <div class="about-section-title">
                             <h1 class="wow slideInUp" data-wow-duration="3s">about us<span></span></h1>
-                            <p class="wow slideInLeft" data-wow-duration="2.5s">It is a long established facthat reader will be distracted bythe readable content page when looking at its layout.</p>
+                            <p class="wow slideInLeft" data-wow-duration="2.5s">{{aboutUs.subtitle}}</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-6 wow slideInRight" data-wow-duration="2.5s">
                         <div class="about-section-text">
-                            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example which of us ever </p>
+                            <p>{{aboutUs.description}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="about-bottom">
                     <div class="row">
+
+                    {% for singleAboutPerformance in aboutPerformance %}
                         <div class="col-md-4 col-lg-4 col-xl-4 wow zoomIn" data-wow-duration="2s" data-wow-delay=".2s">
                             <div class="about-bottom-section">
-                                <img src="bd/img/about/1.png" alt="">
+                                <img src="{{singleAboutPerformance.about_image.url}}" alt="">
                                 <div class="about-bottom-text">
-                                    <h1>Consulting <br>
-                                    for any problems</h1>
-                                    <p>Sed ut perspiciatis unde omnis  natus error sit voluptatem accusantium emque laudantium totam rem</p>
+                                    <h1>{{singleAboutPerformance.about_title_help}}</h1>
+                                    <p>{{singleAboutPerformance.about_description}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-lg-4 col-xl-4 wow zoomIn" data-wow-duration="3s" data-wow-delay=".4s">
-                            <div class="about-bottom-section">
-                                <img src="bd/img/about/2.png" alt="">
-                                <div class="about-bottom-text">
-                                    <h1>Finance<br>
-                                    and Insurance</h1>
-                                    <p>Sed ut perspiciatis unde omnis  natus error sit voluptatem accusantium emque laudantium totam rem</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-4 col-xl-4 wow zoomIn" data-wow-duration="3.5s" data-wow-delay=".6s">
-                            <div class="about-bottom-section">
-                                <img src="bd/img/about/3.png" alt="">
-                                <div class="about-bottom-text">
-                                    <h1>Seo and<br>
-                                        Digital Marketing</h1>
-                                    <p>Sed ut perspiciatis unde omnis  natus error sit voluptatem accusantium emque laudantium totam rem</p>
-                                </div>
-                            </div>
-                        </div>
+                    {% endfor %}
+                    
                     </div>
                 </div>
             </div>

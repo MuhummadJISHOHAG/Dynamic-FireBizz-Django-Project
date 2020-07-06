@@ -8,26 +8,26 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <!-- BOOTSRAP.MIN.CSS -->
-        <link rel="stylesheet" href="bd/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'bd/css/bootstrap.min.css' %}">
         <!-- ICOFONTS.MIN.CSS -->
-        <link rel="stylesheet" href="bd/css/icofont.min.css">
+        <link rel="stylesheet" href="{% static 'bd/css/icofont.min.css' %}">
         <!-- ANIMATE.MIN.CSS -->
-        <link rel="stylesheet" href="bd/css/animate.min.css">
+        <link rel="stylesheet" href="{% static 'bd/css/animate.min.css' %}">
         <!-- OWL.CARESOUEL.MIN. CSS -->
-        <link rel="stylesheet" href="bd/css/owl.carousel.min.css">
-        <link rel="stylesheet" href="bd/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="{% static 'bd/css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'bd/css/owl.theme.default.min.css' %}">
         <!-- MAGNIFIC.POPUP.MIN. CSS -->
-        <link rel="stylesheet" href="bd/css/magnific-popup.css">
+        <link rel="stylesheet" href="{% static 'bd/css/magnific-popup.css' %}">
         <!-- NICE-SELECTOR.MIN. CSS -->
-        <link rel="stylesheet" href="bd/css/nice-select.css">
+        <link rel="stylesheet" href="{% static 'bd/css/nice-select.css' %}">
         <!-- SLICK.MIN. CSS -->
-        <link rel="stylesheet" href="bd/css/slick.css">
+        <link rel="stylesheet" href="{% static 'bd/css/slick.css' %}">
 
         <!-- STYLE CSS -->
-        <link rel="stylesheet" href="bd/css/style.css">
+        <link rel="stylesheet" href="{% static 'bd/css/style.css' %}">
 
         <!-- RRESPONSIVE.CSS -->
-        <link rel="stylesheet" href="bd/css/responsive.css">
+        <link rel="stylesheet" href="{% static 'bd/css/responsive.css' %}">
 
         <title>FireBizz Violet | One Page Responsive Template</title>
         </head>
@@ -120,7 +120,7 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#home">Home</a>
+                                        <a class="nav-link active" href="{% url 'indexPage' %}">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#about">ABOUT</a>
@@ -245,24 +245,22 @@
         <!-- END FOOTER SECTION -->
 
         <!-- JQUERY.MIN.JS -->
-        <script src="bd/js/jquery-2.2.4.min.js"></script>
+        <script src="{% static 'bd/js/jquery-2.2.4.min.js' %}"></script>
         <!-- BOOTSTRAP.MIN.JS -->
-        <script src="bd/js/bootstrap.min.js"></script>
+        <script src="{% static 'bd/js/bootstrap.min.js' %}"></script>
         <!-- POPER.MIN.JS -->
-        <script src="bd/js/popper.min.js"></script>
+        <script src="{% static 'bd/js/popper.min.js' %}"></script>
         <!-- OWL.CAROUSEL.MIN.JS -->
-        <script src="bd/js/owl.carousel.min.js"></script>
+        <script src="{% static 'bd/js/owl.carousel.min.js' %}"></script>
         <!-- SLICK.MIN.JS -->
-        <script src="bd/js/slick.min.js"></script>
+        <script src="{% static 'bd/js/slick.min.js' %}"></script>
         <!-- MAGNIFIC.POPUP.MIN.JS -->
-        <script src="bd/js/jquery.magnific-popup.min.js"></script>
+        <script src="{% static 'bd/js/jquery.magnific-popup.min.js' %}"></script>
         <!-- NICE.SELECTOR.MIN.JS -->
-        <script src="bd/js/jquery.nice-select.min.js"></script>
-        <!-- MIXITUP.MIN.JS -->
-        <script src="bd/js/mixitup.min.js"></script>
+        <script src="{% static 'bd/js/jquery.nice-select.min.js' %}"></script>
         <!-- WOW.MIN.JS -->
-        <script src="bd/js/wow.min.js"></script>
+        <script src="{% static 'bd/js/wow.min.js' %}"></script>
         <!-- CUSTOME.JS -->
-        <script src="bd/js/custome.js"></script>
+        <script src="{% static 'bd/js/custome.js' %}"></script>
     </body>
 </html>

@@ -273,7 +273,6 @@ img {
     position: relative;
 }
 .home-slider .single-home-slider{
-    background-image:url('../img/slider/1.jpg');
     background-position: center;
     background-size:cover;
     background-repeat: no-repeat;
