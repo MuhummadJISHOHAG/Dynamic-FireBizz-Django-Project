@@ -635,7 +635,9 @@ img {
     max-width: 800px;
 }
 .our-cases-area .cases-slider-section{}
-.our-cases-area .cases-slider-section img{}
+.our-cases-area .cases-slider-section img {
+    height: 407px !important;
+}
 .our-cases-area .cases-slider-section .cases-section-text{}
 .our-cases-area .cases-slider-section .cases-section-text h1{
     font-size: 20px;

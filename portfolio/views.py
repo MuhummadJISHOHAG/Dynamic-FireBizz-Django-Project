@@ -23,11 +23,17 @@ def index(request):
     aboutPerformance=AboutPerformance.objects.all()
     #Service Section
     serviceAll=Service.objects.all()
+    #Live Work Section
+    live_work=Live_work.objects.get()
+    #Case Work Section
+    caseWork=CaseWork.objects.all()
 
     context={
         'sliders':sliders,
         'aboutUs':aboutUs,
         'aboutPerformance':aboutPerformance,
         'serviceAll':serviceAll,
+        'live_work':live_work,
+        'caseWork':caseWork,
     }
     return render(request,'index.html',context)
