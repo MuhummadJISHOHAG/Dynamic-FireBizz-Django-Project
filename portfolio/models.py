@@ -58,17 +58,21 @@ class CaseWork(models.Model):
 
 
 class Contact(models.Model): 
-    title=models.CharField(max_length=400)
-    description=models.TextField()
-    profession=models.CharField(max_length=400)
     name=models.CharField(max_length=400)
     email=models.EmailField( max_length=254)
     subject=models.CharField(max_length=400)
     message=models.TextField()
 
     def __str__(self):
-        return self.title
+        return self.name
 
+class ContactComment(models.Model): 
+    title=models.CharField(max_length=400)
+    description=models.TextField()
+    profession=models.CharField(max_length=400)
+
+    def __str__(self):
+        return str(self.title)
 
 class CompanyBrand(models.Model):
     company_logo=models.FileField(upload_to='brand')

@@ -28,6 +28,12 @@ def index(request):
     #Case Work Section
     caseWork=CaseWork.objects.all()
 
+    #Brand Section
+    companyBrand=CompanyBrand.objects.all()
+
+    #FQ Section
+    fQuestion=FQuestion.objects.all()
+
     context={
         'sliders':sliders,
         'aboutUs':aboutUs,
@@ -35,5 +41,8 @@ def index(request):
         'serviceAll':serviceAll,
         'live_work':live_work,
         'caseWork':caseWork,
+        'companyBrand':companyBrand,
+        'fQuestion':fQuestion,
+
     }
     return render(request,'index.html',context)
