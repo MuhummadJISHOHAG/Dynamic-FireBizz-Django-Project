@@ -247,6 +247,7 @@ img {
 .header-menu .navbar .header-bottom-btn {
     margin-left: 242px;
     margin-right: 68px;
+    margin-top: 19px !important;
 }
 .header-menu .navbar .header-bottom-btn a{
     display: inline-block;

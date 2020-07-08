@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load bootstrap4 %}
 
 {% block body %}
     <!-- START MAIN SECTION -->
@@ -168,22 +168,20 @@
                         {% endfor %}
 
                     </div>
+                   
                     <div class="col-md-6 col-lg-6 col-xl-6">
                         <div class="form-information">
                             <h1 class="wow fadeInRight" data-wow-duration="1.5s" data-wow-delay=".2s">Free Consultation</h1>
-                            <form>
-                                <input class="wow fadeInRight" data-wow-duration="1.7s" data-wow-delay=".3s" type="text" name="name" id="name" placeholder="Name :">
-                                <input class="wow fadeInRight" data-wow-duration="2s" data-wow-delay=".4s" type="email" name="email" id="email" placeholder="Email :">
-                                <select class="wow zoomIn" data-wow-duration="5s" id="select">
-                                    <option value="1">Subject :I will Love This Subject</option>
-                                    <option value="2">ENGLISH</option>
-                                    <option value="3">BANGLA</option>
-                                    <option value="4">MATH</option>
-                                    <option value="5">SCIENCE</option>
-                                </select>
-                                <textarea class="wow fadeInRight" data-wow-duration="2.3s" data-wow-delay=".5s" name="message" id="message" placeholder="Message :" ></textarea>
+                            <form action="" method="POST">
+                                {% csrf_token %}
+                                {% bootstrap_form form %}
+                                {% buttons %}
+                                    <button class="wow fadeInRight" data-wow-duration="2.6s" data-wow-delay=".9s" type="submit" id="btn">SEND REGUEST</button>
+                                {% endbuttons %}
+                               
+                               
                             </form>
-                            <button class="wow fadeInRight" data-wow-duration="2.6s" data-wow-delay=".9s" type="submit" id="btn">SEND REGUEST</button>
+                           
                         </div>
                     </div>
                 </div>
@@ -277,7 +275,7 @@
                                             <h1>{{singleBlog.title}}</h1>
                                             <div class="meta-box">
                                                 <span>{{singleBlog.admin_name}}<span>
-                                                <a href="#"><span>{{singleBlog.comments}}</span></a>
+                                                <a href=""><span>{{singleBlog.comments}}</span></a>
                                             </div>
                                             <div class="read-more">
                                                 <a target="_blank" href="{{singleBlog.read_more}}">Read more</a>

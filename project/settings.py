@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "bootstrap4",
 
     #App
     'portfolio',
@@ -128,3 +129,11 @@ STATICFILES_DIRS = [
 
 MEDIA_URL='/media/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+
+EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL='testing@example.com'
+EMAIL_HOST_USER=''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_PORT = 8000
+

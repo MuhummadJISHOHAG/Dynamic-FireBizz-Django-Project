@@ -120,7 +120,7 @@
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item">
-                                        <a class="nav-link active" href="#home">Home</a>
+                                        <a class="nav-link active" href="{% url 'indexPage' %}">Home</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#about">ABOUT</a>
@@ -141,10 +141,11 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="#contact">CONTACT</a>
                                     </li>
+                                    <li class="nav-item header-bottom-btn" style='margin-top:19px'>
+                                        <a href="#skill">get a quote</a>
+                                    </li>
                                 </ul>
-                                <div class="header-bottom-btn">
-                                    <a href="#fq">get a quote</a>
-                                </div>
+
                             </div>
                         </nav>
                     </div>
@@ -167,10 +168,6 @@
                             <div class="footer-left-section">
                                 <h1>FairBIZZ</h1>
                                 <p>My vision is to brand our firm as the best firm in the world. Secure the top place among software providers for both local and international market. Brand our country as the best software provider country. Create employment for youth on the field of both software and corporate level. </p>
-                            </div>
-                            <div class="input-btn">
-                               <input type="email" name="" id="email" placeholder="Enter Your Email">
-                               <a href="#"><i class='icofont-arrow-right'></i></a>
                             </div>
                         </div>
                         <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 middle">
@@ -223,7 +220,7 @@
                     <div class="row">   
                         <div class="col-md-4 col-lg-6 col-xl-6">
                             <div class="fb-copyright">
-                                <h1>©2020 Your Company. All Rights Reserved.</h1>
+                                <h1>©<script>document.write(new Date().getFullYear())</script> Your Company. All Rights Reserved.</h1>
                             </div>
                         </div>
                         <div class="col-md-8 col-lg-6 col-xl-6">
